@@ -279,8 +279,7 @@ class ArticleServiceTest {
         Article article = Article.of(
                 createUserAccount(),
                 "title",
-                "content",
-                "#java"
+                "content", "#java"
         );
         ReflectionTestUtils.setField(article, "id", 1L);
 
