@@ -36,7 +36,7 @@ Spring Boot
 
 ## 데모 페이지
 
-(작성 중)
+* https://project-board-jin-51c0539cc84d.herokuapp.com/
 
 ## 질문, 건의
 
