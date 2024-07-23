@@ -1,14 +1,13 @@
 package com.fastcampus.projectboard.controller;
 
 import com.fastcampus.projectboard.domain.constant.FormStatus;
-import com.fastcampus.projectboard.dto.UserAccountDto;
+import com.fastcampus.projectboard.domain.constant.SearchType;
 import com.fastcampus.projectboard.dto.request.ArticleRequest;
 import com.fastcampus.projectboard.dto.response.ArticleResponse;
 import com.fastcampus.projectboard.dto.response.ArticleWithCommentsResponse;
 import com.fastcampus.projectboard.dto.security.BoardPrincipal;
 import com.fastcampus.projectboard.service.ArticleService;
 import com.fastcampus.projectboard.service.PaginationService;
-import com.fastcampus.projectboard.domain.constant.SearchType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -82,7 +81,7 @@ public class ArticleController {
         return "articles/form";
     }
 
-    @PostMapping ("/form")
+    @PostMapping("/form")
     public String postNewArticle(
             ArticleRequest articleRequest,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal
@@ -102,7 +101,7 @@ public class ArticleController {
         return "articles/form";
     }
 
-    @PostMapping ("/{articleId}/form")
+    @PostMapping("/{articleId}/form")
     public String updateArticle(
             @PathVariable Long articleId, ArticleRequest articleRequest,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal
