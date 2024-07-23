@@ -39,13 +39,13 @@ public class Hashtag extends AuditingFields{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Hashtag hashtag = (Hashtag) o;
-        return Objects.equals(this.getId(), hashtag.id);
+        if (!(o instanceof Hashtag that)) return false;
+        return this.getId() != null && this.getId().equals(that.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(this.getId());
+        return Objects.hash(this.getId());
     }
+
 }
