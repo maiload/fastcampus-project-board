@@ -8,6 +8,12 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
+#  application.name: board
+#  cloud.vault:
+#    scheme: http
+#    authentication: token
+#    token: {VAULT_TOKEN}
+#  config.import: vault://
   thymeleaf3:
     decoupled-logic: true
   datasource:
